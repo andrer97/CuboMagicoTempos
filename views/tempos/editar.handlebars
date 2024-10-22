@@ -1,0 +1,13 @@
+<h1>Editando a tarefa: {{tarefa.titulo}}</h1>
+<form action="/tarefas/editar" method="POST">
+  <input type="hidden" name="id" value={{tarefa.id}}>
+  <div class="form-control">
+    <label for="title">Título:</label>
+    <input type="text" name="titulo" placeholder="O que você vai fazer?" value="{{tarefa.titulo}}">
+  </div>
+  <div class="form-control">
+    <label for="descricao">Descrição:</label>
+    <textarea type="text" name="descricao" placeholder="O que você vai fazer?">{{tarefa.descricao}}</textarea>
+  </div>
+  <input type="submit" value="Salvar">
+</form>
