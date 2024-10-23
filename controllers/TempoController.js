@@ -18,6 +18,9 @@ module.exports = class TempoController{
         const novoRegistro = Tempo.build(tempo);//nova instancia sem salvar no banco de dados
         novoRegistro.calcularMedia();
 
+        console.log(tempo);
+        console.log(novoRegistro)
+
         try{
           await novoRegistro.save();//bd
           res.redirect('/tempo');

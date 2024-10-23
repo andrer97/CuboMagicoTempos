@@ -32,9 +32,8 @@ const Tempo = db.define('Tempo',{
     }
 })
 
-const tempos = [this.tempo1, this.tempo2, this.tempo3, this.tempo4, this.tempo5];
-
 Tempo.prototype.calcularMedia = function() {
+    const tempos = [this.tempo1, this.tempo2, this.tempo3, this.tempo4, this.tempo5];
     const temposOrdenados = [...tempos].sort((a, b) => a - b);
     const temposFiltrados = temposOrdenados.slice(1, 4);
     
@@ -43,10 +42,11 @@ Tempo.prototype.calcularMedia = function() {
         const tempo = temposFiltrados[i];
         soma += tempo;
     }*/
-    this.media = temposFiltrados.reduce((soma, tempo) => soma + tempo, 0) / temposFiltrados.length
+    this.media = parseFloat((temposFiltrados.reduce((soma, tempo) => soma + tempo, 0) / temposFiltrados.length).toFixed(2));
 }
 
 Tempo.prototype.maiorMenor = function() {
+    const tempos = [this.tempo1, this.tempo2, this.tempo3, this.tempo4, this.tempo5];
     return {
         maior: Math.max(...this.tempos),
         menor: Math.min(...this.tempos),
