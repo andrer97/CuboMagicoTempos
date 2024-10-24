@@ -1,13 +1,34 @@
-<h1>Editando a tarefa: {{tarefa.titulo}}</h1>
-<form action="/tarefas/editar" method="POST">
-  <input type="hidden" name="id" value={{tarefa.id}}>
-  <div class="form-control">
-    <label for="title">Título:</label>
-    <input type="text" name="titulo" placeholder="O que você vai fazer?" value="{{tarefa.titulo}}">
+<h1>Editar informações de {{tempo.nome}}</h1>
+<form action="/tempos/editar" method="POST">
+  <input type="hidden" name="id" value={{tempo.id}}>
+<div class="form-control">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" placeholder="Seu nome" value="{{tempo.nome}}" required>
   </div>
+  
   <div class="form-control">
-    <label for="descricao">Descrição:</label>
-    <textarea type="text" name="descricao" placeholder="O que você vai fazer?">{{tarefa.descricao}}</textarea>
+    <label for="tempo1">Tempo 1:</label>
+    <input type="number" name="tempo1" step="0.01" placeholder="Tempo 1" value="{{tempo.tempo1}}" required>
+  </div>
+  
+  <div class="form-control">
+    <label for="tempo2">Tempo 2:</label>
+    <input type="number" name="tempo2" step="0.01" placeholder="Tempo 2" value="{{tempo.tempo2}}" required>
+  </div>
+  
+  <div class="form-control">
+    <label for="tempo3">Tempo 3:</label>
+    <input type="number" name="tempo3" step="0.01" placeholder="Tempo 3" value="{{tempo.tempo3}}" required>
+  </div>
+  
+  <div class="form-control">
+    <label for="tempo4">Tempo 4:</label>
+    <input type="number" name="tempo4" step="0.01" placeholder="Tempo 4" value="{{tempo.tempo4}}" required>
+  </div>
+  
+  <div class="form-control">
+    <label for="tempo5">Tempo 5:</label>
+    <input type="number" name="tempo5" step="0.01" placeholder="Tempo 5" value="{{tempo.tempo5}}" required>
   </div>
   <input type="submit" value="Salvar">
 </form>

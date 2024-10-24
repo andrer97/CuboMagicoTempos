@@ -7,12 +7,20 @@
     <li>
       <span class="nome">{{this.nome}}</span>
       <span class="tempos">
-        Tempo 1: {{this.tempo1}} | 
-        Tempo 2: {{this.tempos2}} | 
-        Tempo 3: {{this.tempos3}} | 
-        Tempo 4: {{this.tempos4}} | 
-        Tempo 5: {{this.tempos5}} | 
-        Média: {{this.media}}
+        
+      <table class="table table-bordered table-striped">
+        <tr>
+          {{#each tempo}}
+          {{/each}}
+          <td>{{this.tempo1}}</td>
+          <td>{{this.tempo2}}</td>
+          <td>{{this.tempo3}}</td>
+          <td>{{this.tempo4}}</td>
+          <td>{{this.tempo5}}</td>
+          <td>Média: {{this.media}}</td>
+        </tr>
+      </table>
+        
       </span>
       <span class="actions">
         <a href="/tempos/editar/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
